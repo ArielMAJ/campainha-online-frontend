@@ -1,0 +1,77 @@
+/* campanha.component.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:nth-child(-n+8) {
+  background-color: #007bff; /* Azul para 101-108 */
+}
+
+.button:nth-child(n+9) {
+  background-color: #28a745; /* Verde para 201-208 */
+}
+
+.button:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.button:focus {
+  outline: none;
+}
+
+/* Feedback message style */
+.feedback {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+/* Animating the feedback message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
